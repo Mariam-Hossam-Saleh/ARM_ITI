@@ -90,6 +90,7 @@ u64 RCC_PeripheralArr[NUMBER_OF_PERIPHERALS]={
 #define RCC_PLL_RDY_BIT   25
 #define RCC_SW_CLK_MSK    (0xFFFFFFFCUL)
 #define RCC_PLL_EN_MSK    (0x03000000UL)
+#define RCC_PLL_CFG_RESET (0x20000000UL)
 
 /*
 •f(VCO clock) = f(PLL clock input) × (PLLN / PLLM)
@@ -168,8 +169,7 @@ RCC_enuErrorStatus_t RCC_enuCfgPLL(RCC_unionPLLCfg_t * Add_unionRCC_PLLCfg)
         }
         if(Loc_RCC_errStatus == RCC_OK)
         {
-            u32 Loc_PLLCfg = RCC->RCC_PLLCFGR;
-            Loc_PLLCfg &= (~Add_unionRCC_PLLCfg->All_Reg);
+            u32 Loc_PLLCfg = RCC_PLL_CFG_RESET;
             Loc_PLLCfg |= Add_unionRCC_PLLCfg->All_Reg;
             RCC->RCC_PLLCFGR = Loc_PLLCfg;
         }
