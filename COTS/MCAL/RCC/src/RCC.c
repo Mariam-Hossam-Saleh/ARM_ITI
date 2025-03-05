@@ -120,7 +120,7 @@ RCC_enuErrorStatus_t RCC_enuCfgPLL(RCC_unionPLLCfg_t * Add_unionRCC_PLLCfg)
     {
         Loc_RCC_errStatus = RCC_PLL_INVALID_M_PRESCALER;
     }
-    else if((Add_unionRCC_PLLCfg->Bits.N_Multiplier < 192) || (Add_unionRCC_PLLCfg->Bits.N_Multiplier > 432)) // check if user configuration is valid ( he didn't set another bit )
+    else if((Add_unionRCC_PLLCfg->Bits.N_Multiplier < 2) || (Add_unionRCC_PLLCfg->Bits.N_Multiplier > 432)) // check if user configuration is valid ( he didn't set another bit )
     {
         Loc_RCC_errStatus = RCC_PLL_INVALID_N_MULTIPLIER;
     }

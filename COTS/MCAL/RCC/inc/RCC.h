@@ -1,7 +1,7 @@
 #ifndef RCC_H_
 #define RCC_H_
 
-#include "STD_TYPES.h"
+#include "../../STD_LIB/STD_TYPES.h"
 
 /* Peripheral Buses */
 typedef enum
@@ -56,7 +56,7 @@ typedef enum
 
 typedef enum
 {
-    RCC_HSI_CLK,
+    RCC_HSI_CLK = 0,
     RCC_HSE_CLK,
     RCC_PLL_CLK   
 
@@ -64,7 +64,7 @@ typedef enum
 
 typedef enum 
 {
-    RCC_PLL_SRC_HSI,
+    RCC_PLL_SRC_HSI = 0,
     RCC_PLL_SRC_HSE
 
 }RCC_enuPLL_SRC_t;

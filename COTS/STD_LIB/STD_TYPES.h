@@ -10,6 +10,12 @@ typedef signed short int s16;
 typedef signed long int s32;
 typedef signed long long s64;
 
+typedef enum
+{
+    false = 0,
+    true,
+    
+} bool;
 
 #define NULL_PTR ((void *)0)
 #endif //STD_TYPES_H_

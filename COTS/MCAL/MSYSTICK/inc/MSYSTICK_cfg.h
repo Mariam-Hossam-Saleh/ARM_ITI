@@ -1,0 +1,15 @@
+#ifndef MSYSTICK_CFG_H_
+#define MSYSTICK_CFG_H_
+
+typedef enum {
+
+    MSYSTICK_CLOCK_SOURCE_AHB_BY_8,
+    MSYSTICK_CLOCK_SOURCE_AHB,
+
+}MSYSTICK_enuClockSourceSelection_t;
+
+#define MSYSTIC_CLOCK_SOURCE MSYSTICK_CLOCK_SOURCE_AHB_BY_8
+
+
+
+#endif
